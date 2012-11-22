@@ -1,0 +1,6 @@
+<%= form_for @fixture do |f| %>
+<%= f.label :team_a_name, "Team A" %><%= f.text_field :team_a_name %><br/>
+<%= f.label :team_b_name, "Team B" %><%= f.text_field :team_b_name %><br/>
+<%= f.label :match_date %><%= f.date_select :match_date %><br/>
+<%= f.submit %>
+<% end %>

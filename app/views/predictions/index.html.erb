@@ -1,0 +1,5 @@
+<h1>Make Your Predictions</h1>
+
+<% @predictions.each do |prediction| %>
+  <li><%= prediction.team_a_name %> <%= prediction.team_a_score %>: <%= prediction.team_b_name %> <%= prediction.team_b_score %>date: <%= prediction.match_date%></li>
+<% end %>

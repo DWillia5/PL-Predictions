@@ -1,0 +1,5 @@
+<h1>Fixtures</h1>
+
+<% @fixtures.each do |fixture| %>
+  <li><%= fixture.team_a_name %> : <%= fixture.team_b_name %> date: <%= fixture.match_date%></li>
+<% end %>

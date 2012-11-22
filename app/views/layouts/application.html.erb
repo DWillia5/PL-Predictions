@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PLPredictions</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><%= link_to "Points Criteria", points_path %></a></li>
+        <li><%= link_to "Make My Predictions", predictions_path %></a></li>
+        <li><%= link_to "Leaderboard", leaderboard_path %></li>
+        <li><%= link_to "Fixtures", fixtures_path %></li>
+        <li><%= link_to "Results", results_path %></a></li>
+        <li><%=link_to "Sign In", new_user_session_path %></li>   
+      <li><%=link_to "Logout", destroy_user_session_path, :method => :delete%></li>   
+    </div>
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
