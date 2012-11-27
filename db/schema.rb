@@ -11,9 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112134901) do
+ActiveRecord::Schema.define(:version => 20121127104545) do
 
   create_table "fixtures", :force => true do |t|
+    t.string   "team_a_name"
+    t.string   "team_b_name"
+    t.date     "match_date"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "predictions", :force => true do |t|
+    t.integer  "user_id"
     t.string   "team_a_name"
     t.string   "team_b_name"
     t.integer  "team_a_score"
@@ -23,8 +32,7 @@ ActiveRecord::Schema.define(:version => 20121112134901) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "predictions", :force => true do |t|
-    t.integer  "user_id"
+  create_table "results", :force => true do |t|
     t.string   "team_a_name"
     t.string   "team_b_name"
     t.integer  "team_a_score"
