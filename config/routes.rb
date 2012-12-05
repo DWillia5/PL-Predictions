@@ -8,6 +8,8 @@ PLPredictions::Application.routes.draw do
   get "/results" => "results#index"
 
   resources :predictions
+  get "/my_predictions" => "predictions#my_predictions"
+  
   resources :fixtures
 
   root :to => 'leaderboards#index'

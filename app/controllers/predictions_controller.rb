@@ -1,9 +1,13 @@
 class PredictionsController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @predictions = Prediction.all
   end
 
+  def my_predictions
+     @predictions = current_user.predictions
+  end
 
   def new
     @prediction = Prediction.new
@@ -13,7 +17,7 @@ class PredictionsController < ApplicationController
   #bit of hackaroo here...needs refactoring for failed saves
   def create
     params[:predictions].each do |prediction|
-      @prediction = Prediction.new(prediction)
+      @prediction = current_user.predictions.new(prediction)
       if @prediction.valid?
          @prediction.save
       end

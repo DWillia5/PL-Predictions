@@ -14,12 +14,13 @@
       <ul class="nav">
         <li class="active"><a href="/">Home</a></li>
         <li><%= link_to "Points Criteria", points_path %></a></li>
-        <li><%= link_to "Make My Predictions", predictions_path %></a></li>
+        <li><%= link_to "All Predictions", predictions_path %></a></li>
+        <li><%= link_to "Make My Predictions", new_prediction_path %></a></li>
+        <li><%= link_to "View My Predictions", my_predictions_path %></a></li>
         <li><%= link_to "Leaderboard", leaderboard_path %></li>
         <li><%= link_to "Fixtures", fixtures_path %></li>
         <li><%= link_to "Results", results_path %></a></li>
-        <li><%=link_to "Sign In", new_user_session_path %></li>   
-      <li><%=link_to "Logout", destroy_user_session_path, :method => :delete%></li>   
+        <li><%= display_login %></li> 
     </div>
   </div>
 </div>
