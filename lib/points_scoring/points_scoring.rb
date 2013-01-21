@@ -1,4 +1,4 @@
-class MyNewClass
+class PointsScoring
 
   def mymethod(user_predictions)
     user_predictions.each do |predictions|
